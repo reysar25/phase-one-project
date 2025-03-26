@@ -1,0 +1,83 @@
+body {
+    background-image: url('https://i.pinimg.com/736x/08/a5/a4/08a5a4b30a8d1f4be9113cf6e6726eaf.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    height: 190vh;
+  }
+
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.welcome-container header{
+align-self: center;
+color: #0e82ee;
+padding-left: 10px;
+padding-right: 10px;
+font-weight: 600;
+font-style: oblique;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-size: larger;
+}
+
+.welcome-main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+
+.welcome-card {
+    background-color: rgb(31, 32, 32);
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(238, 235, 235, 0.1);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+.welcome-card h2 {
+    margin-bottom: 1.5rem;
+    color: #eaeff5;
+}
+
+#welcome-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#welcome-form input {
+    padding: 0.8rem;
+    border: 1px solid #363333;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#enter-btn {
+    background-color: #69286b;
+    color: rgb(121, 179, 202);
+    border: none;
+    padding: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+#enter-btn:hover {
+    background-color: #050505;
+}
+footer{
+    color: #69286b;
+    align-self: center;
+    font-size: larger;
+}
+
+

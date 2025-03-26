@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtConnect - Welcome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="welcome-container">
+        <header>
+            <h1>ArtConnect</h1>
+            <p>Where artists and art enthusiasts meet</p>
+        </header>
+
+        <main class="welcome-main">
+            <div class="welcome-card">
+                <h2>Welcome to ArtConnect</h2>
+                <form id="welcome-form">
+                    <input type="text" id="username" placeholder="Enter your name" required>
+                    <button type="submit" id="enter-btn">Enter Gallery</button>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 ArtConnect. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('welcome-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            localStorage.setItem('artconnect-username', username);
+            window.location.href = 'gallery.html';
+        });
+    </script>
+</body>
+</html>
