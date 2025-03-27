@@ -1,10 +1,27 @@
+/* Background styles */
 body {
-    background-image: url('https://i.pinimg.com/736x/08/a5/a4/08a5a4b30a8d1f4be9113cf6e6726eaf.jpg');
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+#background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
-    margin: 0;
-    height: 190vh;
-  }
+    z-index: -1;
+    transition: background-image 1s ease;
+    background-color: #2c3e50;
+}
 
 .welcome-container {
     display: flex;
@@ -80,4 +97,80 @@ footer{
     font-size: larger;
 }
 
+/* Gallery Page Header */
+header {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#welcome-message {
+    font-style: italic;
+}
+
+/* Content Layout */
+.content-wrapper {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Upload Form */
+.upload-section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+/* Gallery Grid */
+.gallery {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.artworks-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 2rem;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 8px;
+    position: relative;
+}
+
+/* Gallery-specific responsive styles */
+@media (max-width: 768px) {
+    .artworks-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
 
