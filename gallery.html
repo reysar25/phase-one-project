@@ -12,6 +12,32 @@
 
 
     }
+    .upload-btn {
+    padding: 12px 18px;
+    font-size: 18px;
+    border: none;
+    background: #ff5733;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.upload-container {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    color: black;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    width: 400px;
+    transition: 0.3s ease-in-out;
+    z-index: 100;
+}
+
     * {
         box-sizing: border-box;
         margin: 0;
@@ -155,7 +181,17 @@
     <header>
         <h1>Art Gallery</h1>
         <p>Where artists and Art enthusiasts meet</p>
+        <button class="upload-btn" onclick="toggleUploadGUI()">Upload Art</button>
     </header>
+    <div id="uploadGUI" class="upload-container">
+        <h2>Upload Your Art</h2>
+        <input type="file" id="imageUpload" accept="image/*">
+        <input type="text" id="artTitle" placeholder="Title of your artwork">
+        <textarea id="artDesc" placeholder="Write a short description and put your @s and whatever"></textarea>
+        <input type="number" id="artPrice" placeholder="Set your price in USD">
+        <button id="enter">Upload</button>
+    </div>
+    
 
     <div class="gallery-container">
     
@@ -298,6 +334,9 @@
     </div>
 
     <script>
+
+
+
         document.addEventListener('DOMContentLoaded', function() {
             const artworks = document.querySelectorAll('.artwork');
             const overlay = document.getElementById('overlay');
